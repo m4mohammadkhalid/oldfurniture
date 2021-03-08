@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../include/head.ejs") %>
+
+	<body>
+
+		<!-- begin #page-container -->
+		<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+			<!-- begin #header -->
+			<%- include("../include/header.ejs") %>
+				<!-- end #header -->
+
+				<!-- begin #sidebar -->
+				<%- include("../include/sidebar.ejs") %>
+					<!-- end #sidebar -->
+
+					<!-- begin #content -->
+					<div id="content" class="content">
+						<!-- begin page-header -->
+						<h1 class="page-header"><center>Add Products</center></small></h1>
+						<% if(errors.length > 0) {%>
+							<%errors.forEach(error=>{%>
+							  <%=error.msg%>
+							<%})%>
+						<%}%>
+					  
+						<!-- end page-header -->
+						<!-- begin row -->
+						<div class="row">
+							<!-- begin col-6 -->
+							<div class="col-xl-6">
+								<!-- begin panel -->
+								<div class="panel panel-success" data-sortable-id="form-validation-1">
+									<!-- begin panel-heading -->
+									<div class="panel-heading">
+										<h4 class="panel-title">Add Products</h4>
+										<div class="panel-heading-btn">
+											<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
+												data-click="panel-expand"><i class="fa fa-expand"></i></a>
+											<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
+												data-click="panel-reload"><i class="fa fa-redo"></i></a>
+											<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning"
+												data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+											<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger"
+												data-click="panel-remove"><i class="fa fa-times"></i></a>
+										</div>
+									</div>
+									<!-- end panel-heading -->
+									<!-- begin panel-body -->
+									<div class="panel-body">
+										<form method="post" action="/postProduct" enctype="multipart/form-data" class="form-horizontal" data-parsley-validate="true" name="demo-form">
+											<div class="form-group row m-b-15">
+												<label class="col-md-4 col-sm-4 col-form-label" for="fullname">Product Name
+													* :</label>
+												<div class="col-md-8 col-sm-8">
+													<input class="form-control" type="text" id="fullname"
+														name="title" placeholder="Product Name"
+														data-parsley-required="true" value="<%= title %>" >
+												</div>
+											</div>											
+											<div class="form-group row m-b-15">
+												<label class="col-md-4 col-sm-4 col-form-label" for="message">Number
+													:</label>
+												<div class="col-md-8 col-sm-8">
+													<input class="form-control" type="text" id="number" name="number"
+														data-parsley-type="number" placeholder="Number" value="<%= number %>" >
+												</div>
+											</div>
+											<div class="form-group row m-b-15">
+												<label class="col-md-4 col-sm-4 col-form-label" for="fullname">Money
+													* :</label>
+												<div class="col-md-8 col-sm-8">
+													<input class="form-control" type="number" id="fullname"
+														name="money" placeholder="Product Name"
+														data-parsley-required="true" value="<%= title %>" >
+												</div>
+											</div>
+											<div class="form-group row m-b-15">
+												<label class="col-md-4 col-sm-4 col-form-label" for="message">Image
+													:</label>
+												<div class="col-md-8 col-sm-8">
+													<input class="form-control" id="imageLable" type="file"  name="image"
+														data-parsley-type="digits" placeholder="Digits" />
+												</div>
+											</div>
+											<div class="form-group row m-b-15">
+												<label class="col-md-4 col-sm-4 col-form-label" for="message">Product Description</label>
+												<div class="col-md-8 col-sm-8">
+													<textarea class="form-control" id="message" name="detail" rows="4"
+														placeholder="Range from 20 - 200" value="<%= detail %>"></textarea>
+												</div>
+											</div>
+											<div class="form-group row m-b-0">
+												<label class="col-md-4 col-sm-4 col-form-label">&nbsp;</label>
+												<div class="col-md-8 col-sm-8">
+													<button type="submit" class="btn btn-primary">Submit</button>
+												</div>
+											</div>
+										</form>
+									</div>
+									<!-- end panel-body -->
+									<!-- begin hljs-wrapper -->
+									
+									<!-- end hljs-wrapper -->
+								</div>
+								<!-- end panel -->
+							</div>
+						
+							<div class="col-xl-6">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+									Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+									unknown printer took a galley of type and scrambled it to make a type specimen book.
+									It has survived not only five centuries, but also the leap into electronic
+									typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+									the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+									with desktop publishing software like Aldus PageMaker including versions of Lorem
+									Ipsum.
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+									Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+									unknown printer took a galley of type and scrambled it to make a type specimen book.
+									It has survived not only five centuries, but also the leap into electronic
+									typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+									the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+									with desktop publishing software like Aldus PageMaker including versions of Lorem
+									Ipsum.
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+									Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+									unknown printer took a galley of type and scrambled it to make a type specimen book.
+									It has survived not only five centuries, but also the leap into electronic
+									typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+									the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+									with desktop publishing software like Aldus PageMaker including versions of Lorem
+									Ipsum.
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+									Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+									unknown printer took a galley of type and scrambled it to make a type specimen book.
+									It has survived not only five centuries, but also the leap into electronic
+									typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+									the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+									with desktop publishing software like Aldus PageMaker including versions of Lorem
+									Ipsum.
+								</p>
+							</div>
+						</div>
+						<!-- end row -->
+					</div>
+					<!-- end #content -->
+
+					<!-- end #content -->
+
+					<!-- begin scroll to top btn -->
+					<a href="javascript:;" class="btn btn-icon btn-circle btn-primary btn-scroll-to-top fade"
+						data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+					<!-- end scroll to top btn -->
+		</div>
+		<!-- end page container -->
+		<%- include("../include/jsfile.ejs") %>
+
+		<script>
+			let imageLable = document.getElementById('imageLable');
+			const lable= document.querySelector('.message');
+			imageLable.addEventListener('change',()=>{
+				let val=imageName.value;
+				let split=val.split('\\');
+				let index=split.length -1;
+				lable.innerText = split[index]
+			})
+		</script>
+
+	</body>
+
+</html>
